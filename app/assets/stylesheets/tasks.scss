@@ -25,9 +25,17 @@
     }
 
     a.delete {
+      display: none;
+
       &, &:hover, &:visited, &:active {
         color: #e74c3c;
         text-decoration: none;
+      }
+    }
+
+    &:hover {
+      a.delete {
+        display: inline-block;
       }
     }
   }
