@@ -9,6 +9,7 @@ class TasksController < ApplicationController
   def create
     @task = current_user.tasks.new(task_params)
     @save_success = @task.save
+    @new_task = current_user.tasks.new
   end
 
 private
