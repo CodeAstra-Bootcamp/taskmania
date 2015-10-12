@@ -1,5 +1,5 @@
 <% if @save_success %>
-  $('#tasks').append('<%= j render(@task) %>');
+  $('#tasks').prepend('<%= j render(@task) %>');
   $('#task-form form')[0].reset();
   TaskForm.hide();
 <% else %>
