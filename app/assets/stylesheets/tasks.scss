@@ -15,28 +15,37 @@
   }
 }
 
-#tasks {
-  .task {
-    background-color: transparent;
-    transition: background-color 0.3s ease-in;
+#tasks-container {
+  padding: 60px 0;
 
-    &:hover {
-      background-color: #ecf0f1;
-    }
+  #tasks {
+    .task {
+      background-color: transparent;
+      transition: background-color 0.3s ease-in;
 
-    a.delete {
-      display: none;
-
-      &, &:hover, &:visited, &:active {
-        color: #e74c3c;
-        text-decoration: none;
+      &:hover {
+        background-color: #ecf0f1;
       }
-    }
 
-    &:hover {
       a.delete {
-        display: inline-block;
+        display: none;
+
+        &, &:hover, &:visited, &:active {
+          color: #e74c3c;
+          text-decoration: none;
+        }
       }
+
+      &:hover {
+        a.delete {
+          display: inline-block;
+        }
+      }
+    }
+
+    .sortable-placeholder {
+      height: 60px;
+      background-color: red;
     }
   }
 }
